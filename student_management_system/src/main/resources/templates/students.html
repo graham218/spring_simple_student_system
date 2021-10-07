@@ -23,7 +23,7 @@ crossorigin="anonymous">
 			</thead>
 			<tbody>
 				<tr th:each="student: ${students}">
-					<td></td>
+					<td th:text="${student.firtstName}"></td>
 				</tr>
 			</tbody>
 		</table>
