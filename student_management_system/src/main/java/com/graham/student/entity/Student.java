@@ -17,7 +17,7 @@ public class Student {
 	private Long id;
 	
 	@Column(name="first_name", nullable=false)
-	private String firstName;
+	private String firstname;
 	
 	@Column(name="last_name")
 	private String lastName;
@@ -30,9 +30,9 @@ public class Student {
 	}
 	
 	//constructor using fields
-	public Student(String firstName, String lastName, String email) {
+	public Student(String firstname, String lastName, String email) {
 		super();
-		this.firstName = firstName;
+		this.firstname = firstname;
 		this.lastName = lastName;
 		this.email = email;
 	}
@@ -44,11 +44,11 @@ public class Student {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 	public String getLastName() {
 		return lastName;
