@@ -1,5 +1,7 @@
 package com.graham.student.service.impl;
 
-public class StudentServiceImpl {
+import com.graham.student.service.StudentService;
+
+public class StudentServiceImpl implements StudentService {
 
 }
