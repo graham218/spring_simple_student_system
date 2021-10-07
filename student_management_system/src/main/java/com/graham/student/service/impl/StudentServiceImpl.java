@@ -12,10 +12,16 @@ import com.graham.student.service.StudentService;
 public class StudentServiceImpl implements StudentService {
 
 	private StudentRepository studentRepository;
+	
+	public StudentServiceImpl(StudentRepository studentRepository) {
+		super();
+		this.studentRepository = studentRepository;
+	}
+
+
 	@Override
 	public List<Student> getAllStudents() {
-		// TODO Auto-generated method stub
-		return null;
+		return studentRepository.findAll();
 	}
 
 }
