@@ -3,6 +3,8 @@ package com.graham.student.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.graham.student.entity.Student;
 import com.graham.student.service.StudentService;
@@ -29,5 +31,11 @@ public class StudentController {
 		Student student=new Student();
 		model.addAttribute("student", student);
 		return "create_student";
+	}
+	
+	@PostMapping("/students")
+	public String saveStudent(@ModelAttribute("student") Student student) {
+		studentservice.saveStudent(student);
+		return "redirect:/students";
 	}
 }
